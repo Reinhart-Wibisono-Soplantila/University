@@ -24,4 +24,10 @@ class StudentController extends Controller
         Student::create($request->all());
         return response()->json($request);
     }
+
+    public function delete($id)
+    {
+        Student::where('idStudents', $id)->delete();
+        return response()->json($id . ' dihapus');
+    }
 }
