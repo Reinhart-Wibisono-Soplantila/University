@@ -18,4 +18,10 @@ class StudentController extends Controller
         $studentData = Student::where('idStudents', $id)->get();
         return $studentData;
     }
+
+    public function create(Request $request)
+    {
+        Student::create($request->all());
+        return response()->json($request);
+    }
 }

@@ -19,5 +19,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/Student', 'StudentController@index');
-$router->get('/Student/{id}', 'StudentController@show');
+$router->get('/student', 'StudentController@index');
+$router->get('/student/{id}', 'StudentController@show');
+$router->post('/student/create', 'StudentController@create');
