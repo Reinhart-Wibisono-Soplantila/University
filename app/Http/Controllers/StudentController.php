@@ -30,4 +30,8 @@ class StudentController extends Controller
         Student::where('FirstName', $FirstName)->delete();
         return response()->json($FirstName . ' dihapus');
     }
+
+    public function update(Request $request)
+    {
+    }
 }
