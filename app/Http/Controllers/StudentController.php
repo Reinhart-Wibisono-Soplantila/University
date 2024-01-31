@@ -20,12 +20,12 @@ class StudentController extends Controller
                 ->orWhere('FirstName', 'like', '%' . $keyword . '%')
                 ->orWhere('LastName', 'like', '%' . $keyword . '%')
                 ->orderBy('idStudents', 'ASC')
-                // ->paginate(2);
-                ->get();
+                ->paginate(2);
+            // ->get();
         } else {
             $results = Student::orderBy('idStudents', 'ASC')
-                // ->paginate(2);
-                ->get();
+                ->paginate(2);
+            // ->get();
         }
         return response()->json($results);
     }
