@@ -23,3 +23,4 @@ $router->get('/student', 'StudentController@index');
 $router->get('/student/{id}', 'StudentController@show');
 $router->post('/student/create', 'StudentController@create');
 $router->delete('/student/{FirstName}', 'StudentController@delete');
+$router->put('/student/update/{id}', 'StudentController@update');

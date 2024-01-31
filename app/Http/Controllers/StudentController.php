@@ -31,7 +31,9 @@ class StudentController extends Controller
         return response()->json($FirstName . ' dihapus');
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
+        Student::where('idStudents', $id)->update($request->all());
+        return response()->json('updated');
     }
 }
