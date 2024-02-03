@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('Country');
             $table->string('MotherName');
             $table->string('FatherName');
+            $table->string('ImageProfile');
             $table->timestamps();
         });
     }

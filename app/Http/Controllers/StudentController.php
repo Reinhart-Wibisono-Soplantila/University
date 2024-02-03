@@ -38,8 +38,23 @@ class StudentController extends Controller
 
     public function create(Request $request)
     {
-        Student::create($request->all());
-        return response()->json($request);
+        $this->validate($request, [
+            'FirstName' => 'required',
+            'LastName' => 'required',
+            'Gender' => 'required',
+            'Religion' => 'required',
+            'Birth' => 'required',
+            'PhoneNumber' => 'required | numeric',
+            'Gmail' => 'required | unique:students',
+            'Address' => 'required',
+            'City' => 'required',
+            'Country' => 'required',
+            'MotherName' => 'required',
+            'FatherName' => 'required',
+        ]);
+
+        $result = Student::create($request->all());
+        return response()->json($result);
     }
 
     public function delete($FirstName)

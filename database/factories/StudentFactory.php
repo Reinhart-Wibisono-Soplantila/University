@@ -23,7 +23,8 @@ class StudentFactory extends Factory
             'City' => $this->faker->city(),
             'Country' => $this->faker->country(),
             'MotherName' => $this->faker->titleFemale() . $this->faker->firstNameFemale(),
-            'FatherName' => $this->faker->titleMale() . $this->faker->firstNameMale()
+            'FatherName' => $this->faker->titleMale() . $this->faker->firstNameMale(),
+            'ImageProfile' => 'default.jpg'
         ];
     }
 }

@@ -10,5 +10,5 @@ class Student extends Model
     use HasFactory;
 
     protected $guard = ['idStudents'];
-    protected $fillable = ['FirstName', 'LastName', 'Gender', 'Religion', 'PhoneNumber', 'Gmail', 'Birth', 'Address', 'City', 'Country', 'MotherName', 'FatherName'];
+    protected $fillable = ['FirstName', 'LastName', 'Gender', 'Religion', 'PhoneNumber', 'Gmail', 'Birth', 'Address', 'City', 'Country', 'MotherName', 'FatherName', 'ImageProfile'];
 }
